@@ -127,4 +127,556 @@
       padding: 24px 20px 80px;
     }
 
-    he
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 2px 30px;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      letter-spacing: 0.17em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .brand-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--gold);
+      box-shadow: 0 0 14px rgba(198,166,100,0.9);
+    }
+
+    .tagline {
+      font-size: 11px;
+      color: var(--text-soft);
+      opacity: 0.8;
+    }
+
+    /* ---------- HERO ---------- */
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.9fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (max-width: 780px) {
+      main {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    .hero-text {
+      padding: 12px 4px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(198,166,100,0.55);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.55);
+    }
+
+    .hero-title {
+      font-size: clamp(2.2rem, 4.5vw, 3rem);
+      line-height: 1.07;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title span {
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--text-soft);
+      line-height: 1.65;
+      max-width: 480px;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle strong {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-bottom: 20px;
+    }
+
+    .hero-meta span {
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(0,0,0,0.55);
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .btn-primary {
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: var(--gold);
+      color: #000;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: -0.015em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 30px rgba(198,166,100,0.45);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(198,166,100,0.7);
+    }
+
+    /* ---------- PANEL (IPHONE MOCKUP) ---------- */
+
+    .hero-panel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone-frame {
+      position: relative;
+      width: min(320px, 84vw);
+      border-radius: 32px;
+      padding: 12px;
+      background: radial-gradient(circle at top, #1e1e1e, #050505);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow:
+        0 18px 50px rgba(0,0,0,0.85),
+        0 0 0 1px rgba(255,255,255,0.04);
+      transform-origin: center;
+      transform: translateY(0) rotate3d(1, -1, 0, 16deg);
+      transition: transform 0.3s ease;
+    }
+
+    .phone-inner {
+      border-radius: 24px;
+      padding: 18px 16px 16px;
+      background: radial-gradient(circle at top, rgba(198,166,100,0.23), #050505);
+      border: 1px solid rgba(255,255,255,0.09);
+      font-size: 13px;
+      color: var(--text-soft);
+      line-height: 1.55;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .phone-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.6);
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    .phone-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    .phone-sub {
+      font-size: 12px;
+      margin-bottom: 14px;
+      color: var(--text-soft);
+    }
+
+    .phone-list {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+
+    .phone-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .phone-list li span {
+      font-size: 16px;
+      color: var(--gold);
+      line-height: 1.2;
+    }
+
+    .phone-footer {
+      margin-top: 6px;
+      font-size: 11px;
+      color: var(--text-soft);
+      opacity: 0.9;
+    }
+
+    .phone-glow {
+      position: absolute;
+      width: 160%;
+      height: 80px;
+      top: -40px;
+      left: -30%;
+      background: linear-gradient(90deg,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent);
+      opacity: 0.33;
+      animation: phoneSweep 9s ease-in-out infinite;
+    }
+
+    @keyframes phoneSweep {
+      0% { transform: translateX(-40%); opacity: 0; }
+      25% { transform: translateX(10%); opacity: 0.5; }
+      50% { transform: translateX(40%); opacity: 0.2; }
+      100% { transform: translateX(80%); opacity: 0; }
+    }
+
+    /* ---------- SECCIÓN WAITLIST ---------- */
+
+    .section {
+      margin-top: 80px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--text-soft);
+      margin-bottom: 26px;
+      max-width: 520px;
+      line-height: 1.65;
+    }
+
+    .card-light {
+      background: rgba(10,10,10,0.94);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 22px 20px 20px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.85);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    label {
+      font-size: 12px;
+      color: var(--text-soft);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(7,7,7,0.96);
+      color: var(--text-main);
+      font-size: 14px;
+      outline: none;
+      letter-spacing: -0.01em;
+    }
+
+    button[type="submit"] {
+      margin-top: 6px;
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: var(--gold);
+      color: #000;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: -0.01em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 8px 24px rgba(198,166,100,0.55);
+    }
+
+    button[type="submit"]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(198,166,100,0.8);
+    }
+
+    .footnote {
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    .why-box {
+      margin-top: 24px;
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(198,166,100,0.22);
+      background: radial-gradient(circle at top, rgba(198,166,100,0.12), rgba(0,0,0,0.6) 70%);
+      font-size: 13px;
+      color: var(--text-soft);
+      line-height: 1.65;
+      letter-spacing: -0.005em;
+    }
+
+    .why-box strong {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .brand-footer {
+      margin-top: 28px;
+      font-size: 12px;
+      color: #888;
+      text-align: right;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-footer span {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* ---------- SCROLL REVEAL ---------- */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="bg-gradient"></div>
+  <div class="bg-grid"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="page">
+    <header>
+      <div class="brand-mark">
+        <div class="brand-dot"></div>
+        MASINNOVACIONES
+      </div>
+      <div class="tagline">Sistemas para personas que no repiten el mismo año.</div>
+    </header>
+
+    <main>
+      <!-- LEFT TEXT -->
+      <section class="hero-text reveal">
+        <div class="pill">
+          <span></span> Lanzamiento · Lista prioritaria
+        </div>
+
+        <h1 class="hero-title">
+          El año que <span>no piensas repetir</span>.
+        </h1>
+
+        <p class="hero-subtitle">
+          Estamos preparando un sistema diseñado para que no entres al próximo año con la misma
+          versión que ya te dejó corto. <strong>No es motivación. Es estructura.</strong>
+        </p>
+
+        <div class="hero-meta">
+          <span>Guía + sistema de preguntas</span>
+          <span>Identidad · Enfoque · Decisiones</span>
+          <span>Acceso limitado de lanzamiento</span>
+        </div>
+
+        <div class="hero-cta-row">
+          <a href="#waitlist" class="btn-primary">
+            Quiero estar en la lista
+            <span>↗</span>
+          </a>
+          <span class="micro">Serás de los primeros en recibir el aviso y el precio más bajo.</span>
+        </div>
+      </section>
+
+      <!-- RIGHT: PANEL MOCKUP -->
+      <section class="hero-panel reveal">
+        <div class="phone-frame" id="phone">
+          <div class="phone-glow"></div>
+          <div class="phone-inner">
+            <div class="phone-badge">
+              <span class="phone-badge-dot"></span>
+              Sistema · MASINNOVACIONES
+            </div>
+
+            <div class="phone-title">El Año Que No Piensas Repetir</div>
+            <div class="phone-sub">
+              Un recorrido guiado para revisar quién fuiste este año y decidir conscientemente
+              quién entra contigo al siguiente.
+            </div>
+
+            <ul class="phone-list">
+              <li>
+                <span>•</span>
+                <div>Identidad: qué versión de ti realmente dirigió tus decisiones.</div>
+              </li>
+              <li>
+                <span>•</span>
+                <div>Enfoque: en qué se consumieron tus días sin que lo notaras.</div>
+              </li>
+              <li>
+                <span>•</span>
+                <div>Decisiones: qué patrón estás repitiendo… y cómo romperlo.</div>
+              </li>
+            </ul>
+
+            <div class="phone-footer">
+              Lo que viene no es un propósito más.  
+              Es un corte de cuentas interno.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- WAITLIST SECTION -->
+    <section id="waitlist" class="section reveal">
+      <h2 class="section-title">Únete a la lista prioritaria</h2>
+      <p class="section-subtitle">
+        Déjanos tu correo para recibir el acceso anticipado al sistema, junto con el
+        precio más bajo que tendrá. Sin ruido. Sin spam. Solo lo necesario.
+      </p>
+
+      <div class="card-light">
+        <form name="lista-prioritaria-ano-no-repites"
+              method="POST"
+              action="/gracias.html"
+              data-netlify="true"
+              netlify-honeypot="bot-field">
+
+          <input type="hidden" name="form-name" value="lista-prioritaria-ano-no-repites" />
+
+          <div style="display:none;">
+            <label>No llenar<input name="bot-field" /></label>
+          </div>
+
+          <div>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+          </div>
+
+          <div>
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+
+          <button type="submit">Quiero ser de los primeros</button>
+
+          <p class="footnote">
+            Nada de correos diarios. Solo te avisaremos cuando esté listo
+            y tendrás acceso al precio más bajo.
+          </p>
+        </form>
+
+        <div class="why-box">
+          <strong>Por qué unirte ahora:</strong><br><br>
+          Este sistema no es motivación momentánea.  
+          Es una estructura diseñada para revisar quién fuiste este año, soltar esa versión y preparar la identidad que sí puede sostener tus próximos 12 meses.<br><br>
+
+          Unirte ahora significa dos cosas:<br>
+          – no lo recibirás tarde<br>
+          – recibirás el precio más bajo que existirá<br><br>
+
+          Cuando abramos puertas, será simple: o avanzas con una estructura nueva, o repites el patrón de siempre.
+        </div>
+      </div>
+
+      <div class="brand-footer">
+        Producido por <span>MASINNOVACIONES</span>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    reveals.forEach(el => observer.observe(el));
+
+    // Parallax very light
+    const phone = document.getElementById('phone');
+    if (phone) {
+      window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY || window.pageYOffset;
+        const offset = Math.min(scrolled * 0.03, 12);
+        phone.style.transform =
+          `translateY(${offset}px) rotate3d(1, -1, 0, 16deg)`;
+      });
+    }
+  </script>
+
+</body>
+</html>
