@@ -1,0 +1,38 @@
+import { Hero } from "@/components/Hero";
+import { ProblemSection } from "@/components/ProblemSection";
+import { TransformationSection } from "@/components/TransformationSection";
+import { ContentSection } from "@/components/ContentSection";
+import { BonusSection } from "@/components/BonusSection";
+import { InternalWealthSection } from "@/components/InternalWealthSection";
+import { SeasonLawSection } from "@/components/SeasonLawSection";
+import { PricingSection } from "@/components/PricingSection";
+import { FinalCTA } from "@/components/FinalCTA";
+import { Helmet } from "react-helmet";
+
+const Index = () => {
+  return (
+    <>
+      <Helmet>
+        <title>La Mentalidad que lo Cambia Todo - Reordena tu mente</title>
+        <meta 
+          name="description" 
+          content="Actualización mental diseñada para profesionales que sienten que algo interno no avanza al mismo ritmo que su esfuerzo. Transforma tu mentalidad en menos de 3 horas." 
+        />
+      </Helmet>
+      
+      <main className="min-h-screen">
+        <Hero />
+        <ProblemSection />
+        <TransformationSection />
+        <ContentSection />
+        <BonusSection />
+        <InternalWealthSection />
+        <SeasonLawSection />
+        <PricingSection />
+        <FinalCTA />
+      </main>
+    </>
+  );
+};
+
+export default Index;
